@@ -1,4 +1,4 @@
-namespace Models.FrameWork
+namespace milkTeaModelsss.frameWork
 {
     using System;
     using System.Collections.Generic;
@@ -6,31 +6,42 @@ namespace Models.FrameWork
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    public partial class Product
+    public partial class User_Accounts
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Product()
+        public User_Accounts()
         {
             Acc_Sell_Pro = new HashSet<Acc_Sell_Pro>();
             Carts = new HashSet<Cart>();
             Orders = new HashSet<Order>();
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int ProductId { get; set; }
-
-        [Required]
-        [StringLength(100)]
-        public string Name { get; set; }
-
-        public float Price { get; set; }
+        [Key]
+        [StringLength(50)]
+        public string Username { get; set; }
 
         [Required]
         [StringLength(50)]
-        public string Imgage_url { get; set; }
+        public string Password { get; set; }
 
-        [Column(TypeName = "text")]
-        public string Desciption { get; set; }
+        [Required]
+        [StringLength(50)]
+        public string FirstName { get; set; }
+
+        [Required]
+        [StringLength(50)]
+        public string LastName { get; set; }
+
+        [Required]
+        [StringLength(50)]
+        public string Email { get; set; }
+
+        [Required]
+        [StringLength(20)]
+        public string PhoneNumber { get; set; }
+
+        [StringLength(100)]
+        public string Address { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Acc_Sell_Pro> Acc_Sell_Pro { get; set; }

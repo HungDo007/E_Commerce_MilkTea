@@ -6,10 +6,9 @@ using System.Web.Mvc;
 
 namespace E_Commerce_MilkTea.Controllers
 {
-    public class HomeController : Controller
+    public class ProductController : Controller
     {
-        // GET: Home
-        //[Authorize]
+        // GET: Product
         public ActionResult Index()
         {
             return View();

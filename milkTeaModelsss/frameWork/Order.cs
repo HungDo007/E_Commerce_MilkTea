@@ -1,4 +1,4 @@
-namespace Models.FrameWork
+namespace milkTeaModelsss.frameWork
 {
     using System;
     using System.Collections.Generic;
@@ -6,21 +6,32 @@ namespace Models.FrameWork
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    public partial class Cart
+    public partial class Order
     {
         [Key]
         [Column(Order = 0)]
-        [StringLength(50)]
-        public string Username { get; set; }
+        public DateTime Oder_Time { get; set; }
+
+        public int Amount { get; set; }
 
         [Key]
         [Column(Order = 1)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ProductId { get; set; }
 
-        public int Amount { get; set; }
+        public int? ToppingId { get; set; }
+
+        [StringLength(1)]
+        public string Size { get; set; }
+
+        [Key]
+        [Column(Order = 2)]
+        [StringLength(50)]
+        public string Username { get; set; }
 
         public virtual Product Product { get; set; }
+
+        public virtual Topping Topping { get; set; }
 
         public virtual User_Accounts User_Accounts { get; set; }
     }

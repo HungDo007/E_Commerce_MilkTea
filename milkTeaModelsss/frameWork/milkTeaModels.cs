@@ -1,14 +1,14 @@
-namespace Models.FrameWork
+namespace milkTeaModelsss.frameWork
 {
     using System;
     using System.Data.Entity;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
 
-    public partial class milkTeaModel : DbContext
+    public partial class milkTeaModels : DbContext
     {
-        public milkTeaModel()
-            : base("name=milkTeaModels")
+        public milkTeaModels()
+            : base("name=milkTeaModelss")
         {
         }
 

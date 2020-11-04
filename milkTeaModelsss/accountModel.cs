@@ -1,27 +1,25 @@
-﻿using Models.FrameWork;
+﻿using milkTeaModelsss.frameWork;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Models
+namespace milkTeaModelsss
 {
     public class accountModel
     {
-        private milkTeaModel _context = null;
+        private milkTeaModels _context = null;
         public accountModel()
         {
-            _context = new milkTeaModel();
+            _context = new milkTeaModels();
         }
-        public bool login(string username,string pass)
+
+        public bool login(string username, string pass)
         {
             int res = _context.User_Accounts.Count(x => x.Username == username && x.Password == pass);
-            if (res!=1)
-            {
+            if (res != 1)
                 return false;
-            }
             return true;
         }
     }
