@@ -26,7 +26,7 @@ namespace milkTeaModelsss.frameWork
 
         [Key]
         [Column(Order = 2)]
-        [StringLength(50)]
+        [StringLength(200)]
         public string Username { get; set; }
 
         public virtual Product Product { get; set; }

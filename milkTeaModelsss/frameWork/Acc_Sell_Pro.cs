@@ -10,7 +10,7 @@ namespace milkTeaModelsss.frameWork
     {
         [Key]
         [Column(Order = 0)]
-        [StringLength(50)]
+        [StringLength(200)]
         public string Username { get; set; }
 
         [Key]

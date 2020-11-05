@@ -18,7 +18,7 @@ namespace milkTeaModelsss.frameWork
         public int ToppingId { get; set; }
 
         [Required]
-        [StringLength(50)]
+        [StringLength(200)]
         public string Name { get; set; }
 
         public int? Price { get; set; }

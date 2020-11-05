@@ -22,5 +22,19 @@ namespace milkTeaModelsss
                 return false;
             return true;
         }
+
+        public bool register(User_Accounts accounts)
+        {
+            try
+            {
+                _context.User_Accounts.Add(accounts);
+                _context.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }

@@ -20,13 +20,13 @@ namespace milkTeaModelsss.frameWork
         public int ProductId { get; set; }
 
         [Required]
-        [StringLength(100)]
+        [StringLength(200)]
         public string Name { get; set; }
 
         public float Price { get; set; }
 
         [Required]
-        [StringLength(50)]
+        [StringLength(250)]
         public string Imgage_url { get; set; }
 
         [Column(TypeName = "text")]
