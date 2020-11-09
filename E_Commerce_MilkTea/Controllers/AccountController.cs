@@ -42,11 +42,13 @@ namespace E_Commerce_MilkTea.Controllers
             FormsAuthentication.SignOut();
             return RedirectToAction("Index", "Account");
         }
+
         [HttpGet]
         public ActionResult Register()
         {
             return View();
         }
+
         [HttpPost]
         public ActionResult Register(register register)
         {
@@ -73,11 +75,13 @@ namespace E_Commerce_MilkTea.Controllers
                 return View(register);
             }
         }
+
         [HttpGet]
         public ActionResult ForgotPass()
         {
             return View();
         }
+
         [HttpPost]
         public ActionResult ForgotPass(string username, string email)
         {
